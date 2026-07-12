@@ -9,7 +9,6 @@ if HF_TOKEN and HF_TOKEN != "":
     login(token=HF_TOKEN, add_to_git_credential=False)
 
 class DatasetStrategy(Protocol):
-    # Agora a interface exige que se devolvam os 3 Datasets e o num_labels
     def prepare_data(self, tokenizer: PreTrainedTokenizer) -> Tuple[Dataset, Dataset, Dataset, int]:
         ...
 

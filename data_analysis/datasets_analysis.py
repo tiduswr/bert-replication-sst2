@@ -118,9 +118,6 @@ def plot_distributions(datasets_info, output_file="reproducibility_dataset_distr
     plt.tight_layout(pad=3.0)
     plt.show()
 
-# ==========================================
-# 5. Ponto de Entrada (Main Execution)
-# ==========================================
 def main():
     setup_environment()
     tw_counts, imdb_counts, s140_counts = fetch_all_distributions()
