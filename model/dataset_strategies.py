@@ -78,7 +78,7 @@ class Sentiment140Strategy:
     
 class DummyStrategy:
     def prepare_data(self, tokenizer: PreTrainedTokenizer) -> Tuple[Dataset, Dataset, Dataset, int]:
-        data = {"text": ["Este é um teste de fumo."] * 200, "label": [1] * 200}
+        data = {"text": ["Este é um smoke-test."] * 200, "label": [1] * 200}
         dataset = Dataset.from_dict(data)
         def tokenize_fn(batch):
             return tokenizer(batch["text"], padding="max_length", truncation=True, max_length=MAX_LENGTH)
